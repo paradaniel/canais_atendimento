@@ -25,7 +25,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "schema_alteracao_daniel.json#/definitions/ResponseBranchesList"
+                                    "$ref": "schema_2022.json#/definitions/ResponseBranchesList"
                                 }
                             }
                         }
