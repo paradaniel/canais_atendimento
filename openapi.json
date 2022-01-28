@@ -1,0 +1,37 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Canais de Atendimento",
+        "description": "Fornecimento de informações de dependências das instituições financeiras e das demais instituições autorizadas a funcionar pelo Banco Central do Brasil e de correspondentes bancários, no formato de dados abertos.",
+        "version": "1.0.2",
+        "contact": {
+            "name": "Dados Abertos do Sistema Financeiro Nacional",
+            "email": "dadosabertossfn@bcb.gov.br"
+        },
+        "license": {
+            "name": "Open Database License (ODbL)",
+            "url": "http://opendefinition.org/licenses/odc-odbl/"
+        }
+    },
+    "paths": {
+        "/branches": {
+            "get": {
+                "summary": "Obtém a lista de dependências próprias da instituição financeira.",
+                "description": "Método para obter a lista de dependências próprias da instituição financeira.",
+                "operationId": "getBranches",
+                "responses": {
+                    "200": {
+                        "description": "Lista de dependências próprias obtida com sucesso.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "schema_alteracao_daniel.json#/definitions/ResponseBranchesList"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
