@@ -494,19 +494,7 @@
             "RECLAMACOES"
           ],
           "description": "Código dos Serviços efetivamente prestados pelo Canal de Atendimento"
-        },
-        "availableSince": {
-          "type": "string",
-          "maxLength": 10,
-          "pattern": "^(\\d{4})-(1[0-2]|0?[1-9])-(3[01]|[12][0-9]|0?[1-9])$",
-          "description": "Data de inicio da prestação do serviço pela dependência (uma string com data conforme especificação RFC-3339. p.ex. 2014-03-19)."
-        },
-        "unavailabeSince": {
-          "type": "string",
-          "maxLength": 10,
-          "pattern": "^(\\d{4})-(1[0-2]|0?[1-9])-(3[01]|[12][0-9]|0?[1-9])$",
-          "description": "Data final da prestação do serviço pela dependência (uma string com data conforme especificação RFC-3339. p.ex. 2014-03-19). Serviços excluídos devem ser listados durante o período de 1 ano após a data de sua exclusão."
-        },
+        },        
         "additionalInfo": {
           "type": "string",
           "description": "Texto livre para complementar informação relativa ao Serviço disponível, quando for selecionada a opção 'OUTROS_PRODUTOS_SERVICOS'",
