@@ -189,7 +189,8 @@
         "type",
         "code",
         "checkDigit",
-        "name"
+        "name",
+		"openingDate"
       ]
     },
 
@@ -201,7 +202,8 @@
         "districtName",
         "townName",
         "countrySubDivision",
-        "postCode"
+        "postCode",
+		"ibgeCode"
       ],
       "allOf": [
         {
