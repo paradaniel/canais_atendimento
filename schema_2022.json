@@ -154,7 +154,8 @@
           "maxLength": 14,
           "pattern": "^(\\d{14})$|^NA$",
           "description": "Número completo do CNPJ da instituição. \nDeve-se ter apenas os números do CNPJ, sem máscara.",
-          "example": "45086338000178"	      
+          "example": "45086338000178"
+	},
         "code": {
           "type": "string",
           "maxLength": 4,
