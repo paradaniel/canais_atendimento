@@ -103,11 +103,11 @@
         },
         "cnpjNumber": {
           "type": "string",
-          "minLength": 14,
-          "maxLength": 14,
-          "pattern": "^(\\d{14})$|^NA$",
-          "description": "Número completo do CNPJ da instituição responsável pela dependência - o CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica.\nDeve-se ter apenas os números do CNPJ, sem máscara.",
-          "example": "45086338000178"
+          "minLength": 8,
+          "maxLength": 8,
+          "pattern": "^(\\d{8})$|^NA$",
+          "description": "Radical do CNPJ da instituição responsável pela dependência - o CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica.\nDeve-se ter apenas os números do CNPJ, sem máscara.",
+          "example": "45086338"		
         },
         "urlComplementaryList": {
           "type": "string",
@@ -148,10 +148,17 @@
           ],
           "description": " > Tipo da dependência, segundo a regulamentação do Bacen,  na Resolução Nº 4072, de 26 de abril de 2012: Dependência de instituições financeiras e demais instituições, autorizadas a funcionar pelo Banco Central do Brasil, destinada à prática das atividades para as quais a instituição esteja regularmente habilitada. \n* `AGENCIA`: Agência é a dependência destinada ao atendimento aos clientes e ao público em geral no exercício de atividades da instituição, não podendo ser móvel ou transitória; \n* `POSTO_ATENDIMENTO`: Posto de Atendimento é a dependência subordinada a agência ou à sede da instituição financeira, destinada ao atendimento ao público no exercício de uma ou mais de suas atividades, podendo ser fixo ou móvel. Segundo Art.15 da Resolução 4.072/2012, os Postos de Atendimento Bancário (PAB), Postos Avançados de Atendimento (PAA), Postos de Atendimento Transitórios (PAT), Postos de Compra de Ouro (PCO), Postos de Atendimento Cooperativo (PAC), Postos de Atendimento de Microcrédito (PAM), Postos Bancários de Arrecadação e Pagamento (PAP) e os Postos de Câmbio atualmente em funcionamento serão considerados PA. \n* `POSTO_ATENDIMENTO_ELETRONICO`: Posto de Atendimento Eletrônico é a dependência constituída por um ou mais terminais de autoatendimento, subordinada a agência ou à sede da instituição, destinada à prestação de serviços por meio eletrônico, podendo ser fixo ou móvel, permanente ou transitório \n* `UNIDADE_ADMINISTRATIVA_DESMEMBRADA `: Unidade Administrativa Desmembrada (UAD) segundo a Resolução 4072 , BCB, 2012, no Art. 8º \"... é dependência destinada à execução de atividades administrativas da instituição, vedado o atendimento ao público\""
         },
+        "cnpjNumber": {
+          "type": "string",
+          "minLength": 14,
+          "maxLength": 14,
+          "pattern": "^(\\d{14})$|^NA$",
+          "description": "Número completo do CNPJ da instituição. \nDeve-se ter apenas os números do CNPJ, sem máscara.",
+          "example": "45086338000178"	      
         "code": {
           "type": "string",
-          "maxLength": 5,
-          "pattern": "^\\d{5}$|^NA$",
+          "maxLength": 4,
+          "pattern": "^\\d{4}$|^NA$",
           "description": "Código identificador da dependência."
         },
         "checkDigit": {
@@ -165,12 +172,6 @@
           "maxLength": 100,
           "pattern": "\\w*\\W*",
           "description": "Nome da dependência."
-        },
-        "relatedBranch": {
-          "type": "string",
-          "maxLength": 4,
-          "pattern": "^\\d{4}$",
-          "description": "Código da agência vinculada ao Posto de Atendimento - se aplicável."
         },
         "openingDate": {
           "type": "string",
